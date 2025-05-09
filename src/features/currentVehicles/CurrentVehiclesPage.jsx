@@ -8,7 +8,7 @@ export default function CurrentVehiclesPage() {
   useEffect(() => {
     const fetchCurrent = async () => {
       const token = localStorage.getItem("access");
-      const res = await fetchWithAuth("http://localhost:8000/api/vehicle/current-vehicles/", {
+      const res = await fetchWithAuth("http://13.201.224.44:8000/api/vehicle/current-vehicles/", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();

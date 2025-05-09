@@ -9,7 +9,7 @@ export default function RegisterVehiclePage() {
 
   const fetchVehicles = async () => {
     const token = localStorage.getItem("access");
-    const res = await fetch("http://localhost:8000/api/vehicle/authorized-vehicles/", {
+    const res = await fetch("http://13.201.224.44:8000/api/vehicle/authorized-vehicles/", {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await res.json();
@@ -24,7 +24,7 @@ export default function RegisterVehiclePage() {
     e.preventDefault();
     try {
       const token = localStorage.getItem("access");
-      const res = await fetchWithAuth("http://localhost:8000/api/vehicle/authorized-vehicles/", {
+      const res = await fetchWithAuth("http://13.201.224.44:8000/api/vehicle/authorized-vehicles/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

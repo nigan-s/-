@@ -15,7 +15,7 @@ export default function DataInsightsPage() {
     const fetchInsights = async () => {
       try {
         const token = localStorage.getItem("access");
-        const res = await fetchWithAuth("http://localhost:8000/api/insights/", {
+        const res = await fetchWithAuth("http://13.201.224.44:8000/api/insights/", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) throw new Error("Failed to load insights");

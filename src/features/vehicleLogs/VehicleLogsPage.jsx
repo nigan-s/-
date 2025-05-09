@@ -8,7 +8,7 @@ export default function VehicleLogsPage() {
   useEffect(() => {
     const fetchLogs = async () => {
       const token = localStorage.getItem("access");
-      const res = await fetchWithAuth("http://localhost:8000/api/vehicle/vehicle-logs/", {
+      const res = await fetchWithAuth("http://13.201.224.44:8000/api/vehicle/vehicle-logs/", {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (!res.ok) {

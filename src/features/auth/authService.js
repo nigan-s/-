@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000/api/token/";
+const API_URL = "http://13.201.224.44:8000/api/token/";
 
 export async function login(username, password) {
   const res = await fetch(API_URL, {
